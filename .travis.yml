@@ -1,23 +1,24 @@
----
 language: node_js
 node_js:
-  - "0.12"
-
+- '0.12'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
-
+- export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
+- npm config set spin false
+- npm install -g npm@^2
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
-
+- npm install -g bower
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: kvKz+2UtDIBhlLSnxegFsd+Erz+z7CTYTAE8J6Mnl6jISdhrCLNMYMqFbuDoRr0B3rLLupVA+WpFkSfpFN4CRQz/9ErSR6Ro0G8QQIQ7jHS4rTa+2rl16SBmGARGI0GtO4FHRHHx25Dwi8axN7z+F8jt8ABIdywFx4KNTbXeM3zbZwmKZm6378mrZuU06q0or4fPOTRhDFa+qehnIz7jSCYxMGWCP+pZWXTXJfmayGcQiEBOY/z0R4/NfSX63kXnrdt+Y6X9yMvCaQ8voGEyemUbiEt0ORi+OIXOaSxrK/nUiyDFweZspLESjTwP0Oewa7NyfSzJAF13mwPmDGEvPyjd0zdKeqeVjaZbNEBxeyrbLGrjGE7/PaGmvzcn7elBoFFQ/n5Tc6jvwNK5RibNTfRO0CBDmkxGq2nU+ZrXOw5cg/YozroLQSA8af+wQUo3M3gagb1yPgySCmFOFXoDq4zoVH0sj91FpvgVO1zs7HTWJWvRw3+sSUNFfcRlPtqMBmS0IvZaKy0gsbv4iv+jnphG7Xuo0YH4rub2aTcHQnw4bQGCR+jBDkVQvnlA5U4np/qaO3r9Iji8PX5iIuB0IGEEDp66wBD9Im4giFEKGuq65Jo+kx9oKJQSP+FBe5uxQUqyyH+ba9cpPQjLhPY2uswXNaZ2DTOJlOq7qd5PHL8=
+  app: frozen-stream-33601
+  on:
+    repo: ultimatemonty/peepchat-ui

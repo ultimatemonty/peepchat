@@ -15,4 +15,4 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: frozen-stream-33601
+      appname: monty-peepchat-ui

@@ -2,6 +2,8 @@
 
 [![CircleCI](https://circleci.com/gh/ultimatemonty/peepchat-ui.svg?style=svg)](https://circleci.com/gh/ultimatemonty/peepchat-ui)
 
+API for this app [here](https://github.com/ultimatemonty/peepchat-api)
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
